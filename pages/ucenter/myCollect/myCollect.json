@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "magBox":"../../../components/magazineBox/magazineBox"
+  },
+  "navigationBarTitleText":"我的收藏"
+}

@@ -1,0 +1,49 @@
+.mag-hor{
+  margin: 20rpx 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  background-color: #eeeeee;
+}
+
+.mag-hor .logo{
+  width: 320rpx;
+  height: 410rpx;
+}
+
+.mag-hor .right-group{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+}
+
+.right-group .mag-title{
+  font-size: 32rpx;
+  color: #333333;
+  font-weight: 700;
+}
+
+.right-group .mag {
+  font-size: 28rpx;
+  color: #aaaaaa;
+}
+
+.right-group .type{
+  margin: 30rpx 0 0;
+}
+
+.right-group .allnum{
+  margin: 20rpx 0 10rpx;
+}
+
+.right-group .read{
+  height: 76rpx;
+  width: 240rpx;
+  line-height: 76rpx;
+  text-align: center;
+  margin: 30rpx auto 0;
+  background-color: #C52E43;
+  color: #ffffff;
+  border-radius: 20rpx;
+}

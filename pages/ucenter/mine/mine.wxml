@@ -1,0 +1,36 @@
+<import src="../../../template/dologin/dologin.wxml"></import>
+<import src="../../../template/phonelogin/phonelogin.wxml"></import>
+<view class="container">
+  <view class="top-group">
+    <view class="info-group">
+      <image class="info-head" src="{{user.head}}"></image>
+      <text class="info-name">{{user.name}}</text>
+      <view class="info-list">
+        <block wx:for="{{tagList}}" wx:key="title">
+          <view class="info-tag" style="width:{{tagW}}rpx" bindtap="tagClick" data-id="{{item.id}}">
+            <view class="left-tag">
+              <image src="{{item.img}}" class="tag-img"></image>
+              <text class="tag-title">{{item.title}}</text>
+            </view>
+          </view>
+          <view class="right-line" wx:if="{{index<tagList.length-1}}"></view>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view class="sel-list">
+    <block wx:for="{{selList}}" wx:key="title">
+      <view class="sel-group" bindtap="goAnotherClick" data-id="{{item.id}}">
+        <image src="{{item.img}}" class="icon" ></image>
+        <text>{{item.title}}</text>
+        <image src="/images/address_right.png" class="right"></image>
+        <button wx:if="{{index==1}}" plain="true" open-type="share" style="width:100%"></button>
+        <button wx:if="{{index==2}}" plain="true" open-type="contact" style="width:100%"></button>
+      </view>
+      
+      <view class="line"></view>
+    </block>
+  </view>
+</view>
+<template is="do_login" data="{{wxlogin: wxlogin}}" />
+<template is="phonelogin" data="{{showPhoneLogin: showPhoneLogin}}" />

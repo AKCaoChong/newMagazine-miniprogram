@@ -1,0 +1,69 @@
+/* pages/createSharePoster/createSharePoster.wxss */
+/* page {
+  width: 100%;
+  height: calc(100% - 160rpx)
+} */
+
+.saveShare {
+  position: fixed;
+  width: 100%;
+  /* border-top: #ccc 1px solid; */
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  bottom: 20rpx;
+  left: 0;
+  z-index: 33453;
+  background: #fff;
+  
+}
+
+.shareImage {
+  width: 100%;
+  /* height: 100%;
+  overflow: hidden; */
+  text-align: center;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 99rpx;
+}
+
+.shareImage image {
+  width: 100%;
+}
+
+.shareMa {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50rpx;
+  font-size: 35rpx;
+}
+
+.shareMaImage {
+  width: 30%;
+  text-align: center;
+}
+
+.shareText {
+  flex: 1;
+}
+
+.saveShare .btn-save {
+  width: 80%;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  border-radius: 20rpx;
+  color: #fff;
+  font-size: 30rpx;
+  background-color: #c6343e;
+}
+button::after {border:none}
+
+.canvas{margin: 0 auto; position: absolute;left: -99999px; top: -99999px}
+
+.marginBottom{padding-bottom: 34px; background: #fff}

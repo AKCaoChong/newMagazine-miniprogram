@@ -1,0 +1,12 @@
+<view class="mag-hor">
+  <image class="logo" src="{{mag.logo}}"></image>
+  <view class="right-group">
+    <text class="mag-title">{{mag.main_title}}</text>
+    <text class="mag type">{{mag.type}}</text>
+    <text class="mag time">{{mag.sub_title}}</text>
+    <text class="mag allnum" wx:if="{{isMy}}">数量:{{mag.all}}</text>
+    <text class="mag hasnum" wx:if="{{isMy}}">剩余:{{mag.notused}}</text>
+    <view class="read" bindtap="readCodeTap" data-magid="{{mag.magazine_id}}" data-mag="{{mag}}" wx:if="{{isMy && !hideRead}}" >阅读码</view>
+    <view class="read" style="margin-top:80rpx;" bindtap="readTap" data-magid="{{mag.magazine_id}}" data-mag_title="{{mag.main_title}}" wx:elif="{{!isMy && !hideRead}}">开始阅读</view>
+  </view>
+</view>

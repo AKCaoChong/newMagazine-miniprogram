@@ -1,0 +1,44 @@
+
+.top-group{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 100;
+}
+.search-group{
+  margin: 20rpx auto;
+  width: 730rpx;
+  height: 70rpx;
+  background-color: #eeeeee;
+  display: flex;
+  align-items: center;
+  border-radius: 10rpx;
+}
+
+.search-group .searchicon{
+  margin: 15rpx 10rpx 15rpx 20rpx;
+}
+
+.search-group text{
+  color: #aaaaaa;
+  font-size: 28rpx;
+  text-align: left;
+  height: 100%;
+  flex: 1;
+  margin-left: 10rpx;
+  line-height: 70rpx;
+}
+
+.mag-list{
+  background-color: #ffffff;
+  width: 100%;
+  padding: 40rpx 20rpx 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 160rpx;
+}
+

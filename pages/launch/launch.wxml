@@ -1,0 +1,4 @@
+<view class="container">
+  <image class="icon" src="../../images/ico_logo.png" mode="aspectFill"></image>
+  <text class="desc">随身携带的时尚</text>
+</view>

@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="user-info">
+    <image class="header" src="{{user.head}}"></image>
+    <text class="nick-name">{{user.name}}</text>
+  </view>
+  <view class="mag-list">
+    <block wx:for="{{magazineList}}" wx:key="id">
+      <magBox item="{{item}}" imgW="{{magBoxW}}" imgH="{{magImgH}}" boxH="{{magBoxH}}" style="margin-bottom:20rpx;" bindmagazineOnTap="magazineClick"></magBox>
+    </block>
+    
+  </view>
+</view>

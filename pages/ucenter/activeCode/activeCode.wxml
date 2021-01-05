@@ -1,0 +1,4 @@
+<view class="container">
+  <image src="{{mag.logo}}" class="mag-bg" mode="widthFix"></image>
+  <view class="copy-active" bindtap="copyActiveClick">激活</view>
+</view>

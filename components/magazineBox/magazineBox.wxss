@@ -1,0 +1,61 @@
+.magazine-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* border: 1px solid #f3f3f3; */
+  box-shadow: 5px 5px 10px 0px #f3f3f3;
+  border: 1px solid #f3f3f3;
+  overflow: hidden;
+}
+
+.magazine-box .image-group{
+  position: relative;
+  overflow: hidden;
+  /* flex: 1; */
+}
+
+.image-group image{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.image-group .free{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 80rpx;
+  height: 68rpx;
+}
+
+.magazine-box .title-group{
+  margin: 20rpx 0rpx;
+  display: flex;
+  flex-direction: column;
+  width: 94%;
+  padding: 3%;
+  min-height: 80rpx;
+}
+
+.title-group .title{
+  font-size: 24rpx;
+  color: #333;
+  width: 100%;
+  font-weight: bold;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  white-space: normal !important;
+  padding: 5rpx 0;
+}
+
+.title-group .time{
+  font-size: 24rpx;
+  color: #666;
+  width: 97%;
+  padding-left: 1%;
+  padding: 5rpx 0;
+}

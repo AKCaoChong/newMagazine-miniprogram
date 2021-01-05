@@ -1,0 +1,32 @@
+<view class="container">
+  <view class="top-group">
+    <image class="mag-logo" src="{{recommend.logo}}" mode="widthFix"></image>
+    <text class="mag-title">{{recommend.main_title}}</text>
+    <text class="mag-time">{{recommend.sub_title}}</text>
+    <view class="mag-read" bindtap="magazineReadClick"  data-main_title="{{recommend.main_title}}" data-magazineid="{{recommend.magazine_id}}">
+      开始阅读
+      <!-- <image src="../../images/begin_read.png" alt=""></image> -->
+    </view>
+    <view class="go-group" bindtap="goOtherMiniPro">
+      <image src="../../images/to_other.png" mode="aspectFill"></image>
+    </view>
+  </view>
+  <view class="camption" wx:if="{{camption}}">
+    <swiper autoplay="false" current="0" vertical>
+      <swiper-item>
+        <text bindtap="camptionClick" data-url="{{camption.campaign_url}}">{{camption.campaign_title}}</text>
+      </swiper-item>
+    </swiper>
+  </view>
+  
+  <view class="line"></view>
+  <view class="newest-group">
+    <view class="title-desc">最新期刊</view>
+    <view class="mag-list">
+      <block wx:for="{{magazineList}}" wx:key="id">
+          <magBox item="{{item}}" imgW="{{magBoxW}}" imgH="{{magImgH}}" boxH="{{magBoxH}}" style="margin-left:{{index==0?0:20}}rpx;" bindmagazineOnTap="magazineClick"></magBox>
+      </block>
+    </view>
+    
+  </view>
+</view>

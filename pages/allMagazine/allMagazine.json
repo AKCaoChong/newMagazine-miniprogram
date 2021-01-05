@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "tab-sel":"../../components/tabSel/tabSel",
+    "magBox":"../../components/magazineBox/magazineBox"
+  },
+  "enablePullDownRefresh": true
+}

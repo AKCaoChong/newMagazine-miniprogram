@@ -1,0 +1,143 @@
+.container .desc-info{
+  width: 100%;
+  height: 200rpx;
+  background: linear-gradient(#ffffff,#eeeeee);
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+.desc-info .content{
+  font-size: 30rpx;
+  color: #333333;
+}
+
+.mag-list{
+  width: 100%;
+}
+
+.container .code-info{
+  width: 100%;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+.code-info .code-used{
+  width: 100%;
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120rpx;
+  background-color: #eeeeee;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  /* box-shadow: 3rpx 3rpx 5rpx #eeeeee;; */
+}
+
+.code-used .used-left{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 1;
+}
+
+.used-left .used{
+  font-size: 24rpx;
+  color: #333333;
+}
+
+.code-used .line{
+  width: 1rpx;
+  background-color: #cccccc;
+  height: 100%;
+  margin-right: 30rpx;
+}
+
+.code-used .used-info{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.used-info image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+}
+
+.used-info .used{
+  margin-left: 20rpx;
+  font-size: 24rpx;
+  color: #333333;
+}
+
+.code-info .code-sending{
+  width: 100%;
+  padding: 30rpx;
+  box-sizing: border-box;
+  box-shadow: 3rpx 3rpx 5rpx #eeeeee;
+  border-radius: 10rpx;
+  height: 120rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.code-sending .code{
+  font-size: 24rpx;
+  color: #333333;
+}
+
+.code-info .code-normal{
+  width: 100%;
+  padding: 30rpx;
+  box-sizing: border-box;
+  box-shadow: 3rpx 3rpx 5rpx #eeeeee;
+  border-radius: 10rpx;
+  height: 120rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.code-normal .code{
+  font-size: 24rpx;
+  color: #333333;
+}
+
+.code-normal .used{
+  color: #ffffff;
+  font-size: 28rpx;
+  padding: 18rpx 20rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  width: 100rpx;
+}
+
+.code-normal .copy{
+  background-color: #333333;
+}
+
+
+.code-normal .send{
+  background-color: #C52E43;
+  position: relative;
+}
+
+.share-btn{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.share-btn::after{
+  border: none;
+}
+
+

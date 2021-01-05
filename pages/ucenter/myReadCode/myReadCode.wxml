@@ -1,0 +1,32 @@
+<view class="container">
+  <view class="desc-info">
+    <text class="content">每个阅读码对应一本电子杂志,每个阅读码只可被激活一次,每人只能激活每本刊的一个阅读码,更多阅读码可以送给朋友</text>
+  </view>
+  <view class="mag-list">
+    <mag-hor bindreadCodeTap="readCodeTap" mag="{{magzine}}" isMy="true" hideRead="true"></mag-hor>
+  </view>
+  <view class="code-info" wx:for="{{codeList}}" wx:key="code">
+    <view class="code-used" wx:if="{{item.status == 200}}">
+      <view class="used-left">
+        <text class="used code">阅读码:{{item.code}}</text>
+        <text class="used time">{{item.activate_time}}</text>
+      </view>
+      <view class="line"></view>
+      <view class="used-info">
+        <image src="{{item.headimg}}"></image>
+        <text class="used name">{{item.nickname}}</text>
+      </view>
+    </view>
+    <view class="code-sending" wx:elif="{{item.status == 2}}">
+      <view class="code left">阅读码:{{item.code}}</view>
+      <view class="code sending">正在赠送中</view>
+    </view>
+    <view class="code-normal" wx:elif="{{item.status == 100}}">
+      <view class="code left">阅读码:{{item.code}}</view>
+      <view class="used copy" bindtap="copyClick" data-code="{{item.code}}">复制</view>
+      <view class="used send" bindtap="sendClick" data-code="{{item.code}}">
+        <button open-type="share" class="share-btn" data-codestr="{{item.code}}"></button>
+        送好友</view>
+    </view>
+  </view>
+</view>

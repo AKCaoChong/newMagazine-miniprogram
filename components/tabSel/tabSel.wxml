@@ -1,0 +1,22 @@
+<view class="tab-group">
+  <scroll-view class="bottom-scroll" scroll-x scroll-left="{{x}}" scroll-with-animation="{{true}}">
+    <view class='nav {{item.zinetype_id == zinetype_id?"cur":""}}' wx:for="{{nav_list}}"  wx:key="zinetype_id"  data-zinetype_id="{{item.zinetype_id}}"
+    bindtap='switchTap' data-index="{{index}}">
+      <view>{{item.zinetype_name}}</view>
+    </view>
+    
+  </scroll-view>
+  <view class="moreImg" bindtap="filterClick">  
+    <text>筛选</text>
+    <image src="../../images/mag_filter.png"></image>
+  </view>
+  <view class="filter-group" animation="{{filterAni}}">
+    <scroll-view class="bottom-scroll" scroll-x scroll-left="{{yearX}}" scroll-with-animation="{{true}}">
+    <view class='nav {{item.year_id == year_id?"cur":""}}' wx:for="{{sub_nav_list}}"  wx:key="year_id"  data-year_id="{{item.year_id}}"
+    bindtap='yearSwitchTap' data-index="{{index}}">
+      <view>{{item.year_name}}</view>
+    </view>
+    
+  </scroll-view>
+  </view>
+</view>

@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="search-group">
+    <view class="search-arr">
+      <icon class="searchicon" size="20" type="search"></icon>
+      <input type="text" placeholder="请输入杂志名" bindinput="searchOnInput"></input>
+    </view>
+    <view class="sousou" bindtap="searchClick">搜索</view>
+  </view>
+  <view class="hot-search">
+    <text class="hot-title">热门搜索</text>
+    <view class="hot-tags">
+      <block wx:for="{{tags}}" wx:key="type">
+        <text class="item-text" bindtap="itemTagClick" data-index="{{index}}" data-typeid="{{item.magazine_id}}" data-typename="{{item.keyword}}">{{item.keyword}}</text>
+      </block>
+    </view>
+  </view>
+  <view class="mag-list">
+    <block wx:for="{{magazineList}}" wx:key="id">
+      <mag-hor bindreadTap="readTap" mag="{{item}}"></mag-hor>
+    </block>
+    
+  </view>
+</view>

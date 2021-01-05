@@ -1,0 +1,123 @@
+
+.top-group{
+  background-color: #ffffff;
+  width: 76%;
+  margin: 50rpx auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-group .mag-logo{
+  width: 100%;
+  min-height: 500rpx;
+}
+
+.top-group .mag-title{
+  margin: 20rpx 0 10rpx;
+  font-size: 30rpx;
+  color: #333333;
+  font-weight: 700;
+  text-align: center;
+}
+
+.top-group .mag-time{
+  margin: 0 0 10rpx;
+  font-size: 26rpx;
+  color: #666666;
+  text-align: center;
+}
+
+.top-group .mag-read{
+  background-color: #C52E43;
+  width: 60%;
+  height: 80rpx;
+  font-size: 30rpx;
+  color: #ffffff;
+  border-radius: 16rpx;
+  line-height: 80rpx;
+  text-align: center;
+  margin: 10rpx 0;
+}
+
+.mag-read image{
+  width: 100%;
+  height: 100%;
+}
+
+.top-group .go-group{
+  margin: 10rpx 0;
+  background-color: #cccccc;
+  width: 60%;
+  height: 80rpx;
+  color: #ffffff;
+  border-radius: 16rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.go-group image{
+  width: 100%;
+  height: 100%;
+}
+
+.line{
+  background-color: #eeeeee;
+  width: 100%;
+  height: 20rpx;
+}
+
+.container .camption{
+  margin: 0 20rpx 20rpx;
+  width: 710rpx;
+  height: 70rpx;
+  background-color: #eeeeee;
+  border-radius: 10rpx;
+}
+
+.camption swiper{
+  width: 100%;
+  height: 100%;
+}
+
+.camption text{
+  width: 100%;
+  font-size: 30rpx;
+  color: #666666;
+  line-height: 70rpx;
+  margin: 20rpx;
+}
+
+.newest-group{
+  width: 100%;
+}
+
+.newest-group .title-desc{
+  color: #333333;
+  background-color: #ffffff;
+  width: 100%;
+  padding: 30rpx 20rpx 20rpx;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  font-weight: 700;
+  text-align: left;
+}
+
+.newest-group .mag-list{
+  /* width: 100%; */
+  margin: 0 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow: scroll;
+  /* overflow-x: hidden; */
+}
+
+/* ::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+  display: none;
+} */

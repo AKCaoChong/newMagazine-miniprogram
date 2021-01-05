@@ -1,0 +1,47 @@
+<view class="container">
+  <view class="user-info">
+    <image class="header" src="{{user.head}}"></image>
+    <text class="nick-name">{{user.name}}</text>
+  </view>
+  <view class="address-title" wx:if="{{addressStatus == 'list'}}">
+    我的地址
+  </view>
+  <view class="address-title" wx:if="{{addressStatus == 'add'}}">
+    新增地址
+  </view>
+  <view class="address-title" wx:if="{{addressStatus == 'edit'}}">
+    修改地址
+  </view>
+  <view class="address-list {{addressStatus == 'list'?'showAnim':'hideAnim'}}" wx:if="{{addressStatus == 'list'}}">
+    <view class="address-group" wx:for="{{addressList}}" wx:key="id" bindtap="addressClick" data-index="{{index}}">
+      <text>{{item.name}}  {{item.mobile}}</text>
+      <text>{{item.province}}{{item.city}}{{item.district}}{{item.address}}</text>
+    </view>
+  </view>
+  
+  
+  <view class="add-group {{addressStatus == 'edit'?'showAnim':'hideAnim'}}" wx:if="{{addressStatus == 'edit'}}">
+    <input type="text" placeholder="收件人姓名" value="{{editingAddress.name}}"  bindinput="nameInput"></input>
+    <input type="number" placeholder="手机号" value="{{editingAddress.mobile}}" bindinput="mobileInput"></input>
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+      <view class="picker">{{editingAddress.province}}-{{editingAddress.city}}-{{editingAddress.district}}</view>
+    </picker>
+    <input type="text" placeholder="请输入详细地址" value="{{editingAddress.address}}" bindinput="addressInput"></input>
+    <input type="text" placeholder="请输入邮政编码" value="{{editingAddress.postcode}}" bindinput="emailCodeInput"></input>
+  </view>
+
+  <view class="add-group {{addressStatus == 'add'?'showAnim':'hideAnim'}}" wx:if="{{addressStatus == 'add'}}">
+    <input type="text" placeholder="收件人姓名" bindinput="nameInput"></input>
+    <input type="number" placeholder="手机号" bindinput="mobileInput"></input>
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+      <view class="picker">{{editingAddress.province}}-{{editingAddress.city}}-{{editingAddress.district}}</view>
+    </picker>
+    <input type="text" placeholder="请输入详细地址" bindinput="addressInput"></input>
+    <input type="text" placeholder="请输入邮政编码"  bindinput="emailCodeInput"></input>
+  </view>
+
+  <view class="add-address" bindtap="addAddressClick" wx:if="{{addressStatus == 'list'}}">新增地址</view>
+  <view class="add-address" bindtap="editAddressClick" wx:if="{{addressStatus == 'edit'}}">保存修改</view>
+  <view class="add-address" bindtap="saveAddressClick" wx:if="{{addressStatus == 'add'}}">保存地址</view>
+  <view class="add-address cancel" bindtap="cancelAddress" wx:if="{{addressStatus == 'add' ||addressStatus == 'edit'}}">返回</view>
+  </view>

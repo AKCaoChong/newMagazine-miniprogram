@@ -1,0 +1,139 @@
+@import "../../../template/dologin/dologin.wxss";
+@import "../../../template/phonelogin/phonelogin.wxss";
+.container .top-group{
+  position: relative;
+  width: 100%;
+  height: 380rpx;
+  background: linear-gradient(#ffffff, #cccccc);
+}
+
+.top-group .info-group{
+  margin-top: 100rpx;
+  height: 100%;
+  background: linear-gradient(#ffffff,#eeeeee);
+  border-radius: 40rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-group .info-head{
+  width: 160rpx;
+  height: 160rpx;
+  border: solid #eeeeee 4rpx;
+  border-radius: 80rpx;
+  margin-top: -60rpx;
+  box-sizing: border-box;
+}
+
+.info-group .info-name{
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+  padding-top: 20rpx;
+}
+
+.info-group .info-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40rpx;
+  box-sizing: border-box;
+}
+
+.info-list .info-tag{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-tag .left-tag{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.left-tag image{
+  width: 80rpx;
+  height: 80rpx;
+  margin-bottom: 20rpx;
+}
+
+.left-tag .tag-title{
+  text-align: center;
+  font-size: 26rpx;
+  color: #666;
+  font-weight: 300;
+}
+
+.info-list .right-line{
+  height: 30rpx;
+  width: 3rpx;
+  background-color: #cccccc;
+}
+
+.sel-list{
+  margin-top: 120rpx;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sel-list .sel-group{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 0;
+}
+
+.sel-group text{
+  font-size: 30rpx;
+  color: #333333;
+  margin-left: 30rpx;
+  flex: 1;
+  font-weight: 300;
+}
+
+.sel-group .icon{
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.sel-group .right{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.sel-list .line{
+  width: 100%;
+  height: 2rpx;
+  background-color: #cccccc;
+  /* margin-top: 20rpx; */
+}
+
+button[plain] {
+  border:none;
+}
+
+.sel-group{
+  position: relative;
+}
+
+.sel-group button{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+

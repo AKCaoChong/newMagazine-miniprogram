@@ -1,0 +1,79 @@
+.search-group{
+
+  width: 100%;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 88rpx;
+}
+
+.search-group .search-arr{
+  display: flex;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+  background-color: #eeeeee;
+  border-radius: 10rpx;
+}
+
+.search-arr .searchicon{
+  margin: 10rpx 10rpx 10rpx 15rpx;
+}
+
+.search-arr input{
+  flex: 1;
+  height: 100%;
+  color: #aaaaaa;
+  line-height: 100%;
+}
+
+.search-group .sousou{
+  background-color: #ffffff;
+  margin-left: 20rpx;
+  font-size: 30rpx;
+  color: #333333;
+  width: 100rpx;
+  height: 78rpx;
+  line-height: 78rpx;
+  text-align: center;
+}
+
+.hot-search{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20rpx 20rpx;
+  box-sizing: border-box;
+}
+
+.hot-search .hot-title{
+  margin: 10rpx 0;
+  font-size: 32rpx;
+  color: #333333;
+  font-weight: 700;
+}
+
+.hot-search .hot-tags{
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.hot-tags .item-text{
+  background: #f6f6f6;
+  color: #353535;
+  padding: 10rpx 20rpx;
+  font-size: 28rpx;
+  text-align: center;
+  border-radius: 20rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.mag-list{
+  width: 100%;
+}

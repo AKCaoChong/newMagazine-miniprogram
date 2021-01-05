@@ -1,0 +1,11 @@
+<view class="magazine-box" style="width: {{imgW}}rpx;height:{{boxH}}rpx;" bindtap="magazineOnClick" data-magazine_id="{{item.magazine_id}}" data-main_title="{{item.main_title}}">
+  <view class="image-group" style="width: {{imgW}}rpx; height:{{imgH}}rpx;">
+    <image class="logo" src="{{item.logo}}" mode="widthFix" style="max-height:{{imgH}}rpx;"></image>
+    <image class="free" src="../../images/free_tag.png"  wx:if="{{item.is_free == 1}}"></image>
+    <image class="free" src="../../images/mag_mine.png"  wx:if="{{item.is_mine == 1}}"></image>
+  </view>
+  <view class="title-group">
+    <text class="title">{{item.main_title}}</text>
+    <text class="time">{{item.sub_title}}</text>
+  </view>
+</view>

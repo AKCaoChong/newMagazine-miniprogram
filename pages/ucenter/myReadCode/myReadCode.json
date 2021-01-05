@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "mag-hor": "../../../components/magazineHor/magazineHor"
+  },
+  "navigationBarTitleText":"我的阅读码"
+}

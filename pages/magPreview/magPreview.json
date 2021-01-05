@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "canvasdrawer": "/components/canvasdrawer/canvasdrawer"
+  },
+  "navigationBarTitleText":"预览页"
+  
+}

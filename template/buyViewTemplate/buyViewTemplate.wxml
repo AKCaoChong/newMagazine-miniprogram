@@ -1,0 +1,49 @@
+<template name="buy-view">
+  <view class="closePreviewcss" bindtap="closePreview">
+    <image src="/images/close.png" mode="widthFix"></image>
+  </view>
+  <view class="goumai">
+    <text class="f34">购买</text>
+    <text class="gmsmtitle">{{articleTitle}}</text>
+    <view class="gmsm-group">
+      <image src="/images/gmsm_icon.png"></image>
+      <text class="f25" bindtap="gmsmClick">订阅说明</text>
+    </view>
+  </view>
+  <view class="line"></view>
+  <view class="chosePreview">
+    <view class="f25">选择数量:</view>
+    <view class="previewShuliang">
+      <block wx:for="{{previews}}" wx:key="item">
+        <view wx:if="{{index===lastIndex}}" class="price-sel" bindtap="choseMoney" data-index="{{index}}">
+          <text>{{item.num}} 本</text>
+          <text>￥{{item.price}}</text>
+        </view>
+        <view wx:else class="price-normal" bindtap="choseMoney" data-index="{{index}}">
+          <text>{{item.num}} 本</text>
+          <text>￥{{item.price}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="line"></view>
+  <view class="custom-price">
+    <view class="f25">自定义本数:</view>
+    <view class="stepper-group">
+      <view class="stepper">
+        <text class="{{minusStatus}}" type="number" bindtap="bindMinus">-</text>
+        <input bindinput="bindManual" value="{{num}}"></input>
+        <text bindtap="bindPlus">+</text>
+      </view>
+      <view class="price-label">￥{{customPrice}}</view>
+    </view>
+  </view>
+  <view class="line"></view>
+  <view class="address-group" bindtap="addressSelClick" wx:if="{{hasActive}}">
+    <text class="sel-address" wx:if="{{selAddress}}">{{selAddress.province}} {{selAddress.city}} {{selAddress.district}} {{selAddress.address}}</text>
+    <text class="sel-address" wx:else>选择地址获得赠品</text>
+    <image class="right" src="/images/address_right.png"></image>
+  </view>
+  <view class="buyBtn" bindtap="androidBuy">支付购买</view>
+  
+</template>

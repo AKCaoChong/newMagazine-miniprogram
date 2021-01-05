@@ -1,0 +1,30 @@
+.container .user-info{
+  width: 100%;
+  height: 200rpx;
+  background: linear-gradient(#ffffff,#eeeeee);
+  display: flex;
+  align-items: center;
+}
+
+.user-info .header{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 70rpx;
+  box-sizing: border-box;
+  border: 4rpx #ffffff solid;
+  box-shadow: 2rpx 2rpx 2rpx #eeeeee;
+  margin-left: 40rpx;
+  
+}
+
+.user-info .nick-name{
+  margin-left: 30rpx;
+  font-size: 32rpx;
+  color: #333333;
+  font-weight: bold;
+}
+
+.mag-list{
+  width: 100%;
+}
+

@@ -1,0 +1,26 @@
+<view>
+  <web-view src="{{webViewUrl}}">
+    
+  </web-view>
+</view>
+
+
+
+<!-- <cover-view class="share-txt" bindtap="goodsListClick" animation="{{hideAnimation}}">
+      商品列表
+    </cover-view>
+    <cover-view class="list-group" animation="{{listAni}}">
+      <cover-view class="top-group">
+        <cover-view class="title">商品列表</cover-view>
+        <cover-image class="close" src="/images/close.png" bindtap="closeClick"></cover-image>
+      </cover-view>
+      <cover-view class="goods-group" wx:for="{{goodsList}}" wx:for-item="goods" wx:key="goods_id">
+        <cover-image class="logo" src="{{goods.logo}}"></cover-image>
+        <cover-view class="goods-info">
+          <cover-view class="goods-title">{{goods.title}}</cover-view>
+          <cover-view class="goods-price">￥{{goods.price}}</cover-view>
+        </cover-view>
+      </cover-view>
+    </cover-view> -->
+
+

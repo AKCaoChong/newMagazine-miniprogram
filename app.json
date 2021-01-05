@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/launch/launch",
+    "pages/logs/logs",
+    "pages/home/home",
+    "pages/ucenter/mine/mine",
+    "pages/allMagazine/allMagazine",
+    "pages/magSearch/magSearch",
+    "pages/magPreview/magPreview",
+    "pages/ucenter/addressList/addressList",
+    "pages/webpage/webpage",
+    "pages/ucenter/mymag/mymag",
+    "pages/ucenter/myCollect/myCollect",
+    "pages/ucenter/myAddress/myAddress",
+    "pages/ucenter/myReadCode/myReadCode",
+    "pages/createSharePoster/createSharePoster",
+    "pages/ucenter/activeCode/activeCode"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "瑞丽电子刊",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#000000",
+    "borderStyle": "white",
+    "selectedColor": "#BC916B",
+    "color": "#a7a7a7",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "",
+        "iconPath": "images/tabbar/home_normal.png",
+        "selectedIconPath": "images/tabbar/home_sel.png"
+      },
+      {
+        "pagePath": "pages/allMagazine/allMagazine",
+        "text": "",
+        "iconPath": "images/tabbar/kan_normal.png",
+        "selectedIconPath": "images/tabbar/kan_sel.png"
+      },
+      {
+        "pagePath": "pages/ucenter/mine/mine",
+        "text": "",
+        "iconPath": "images/tabbar/my_normal.png",
+        "selectedIconPath": "images/tabbar/my_sel.png"
+      }
+    ]
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx21456e2750e090c4",
+    "wxfdb58de086211a5d"
+  ],
+  
+  "sitemapLocation": "sitemap.json"
+}

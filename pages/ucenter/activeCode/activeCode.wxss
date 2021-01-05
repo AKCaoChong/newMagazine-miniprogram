@@ -1,0 +1,19 @@
+.mag-bg{
+  display: block;
+  width: 80%;
+  margin: 100rpx auto;
+  height: auto;
+}
+
+.copy-active{
+  width: 80%;
+  height: 80rpx;
+  border-radius: 10rpx;
+  margin: 40rpx auto;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  color: #ffffff;
+  background-color: #C52E43;
+}
+

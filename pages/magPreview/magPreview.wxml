@@ -1,0 +1,104 @@
+<import src="../../template/buyViewTemplate/buyViewTemplate.wxml"></import>
+<import src="../../template/previewSwiperTem/previewSwiperTem.wxml"></import>
+<import src="../../template/goumaishuoming/goumaishuoming.wxml"></import>
+<import src="../../template/dologin/dologin.wxml"></import>
+<import src="../../template/phonelogin/phonelogin.wxml"></import>
+
+<view class="container">
+  <view class="func collect" animation="{{funcRightAni}}" bindtap="collectClick">
+    <image class="collect-img" src="/images/mag_collect_sel.png"  wx:if="{{magDetail.is_collect}}"></image>
+    <image class="collect-img" src="/images/mag_collect_normal.png" wx:else></image>
+  </view>
+  <view class="func share" animation="{{funcRightAni}}" bindtap="shareClick">
+    <image class="share-img" src="/images/mag_share.png"></image>
+  </view>
+  <!-- style="height:{{swiperH}}px" -->
+  <view class="bg-swiper" style="height:{{swiperH}}px">
+    <template is="previewSwiperTem" data="{{swiperItems}}"></template>
+  </view>
+  
+  <!-- <view class="line-group">
+    <view class="line-cu"></view>
+  </view> -->
+  <view wx:if="{{isIos || is_free || is_mine}}" class="read" bindtap="readClick">开始阅读</view>
+
+  <view class="android-read" wx:else>
+    <view class="android code" bindtap="readClick">阅读码</view>
+    <view class="android buy" bindtap="previewPayBtn">购买</view>
+  </view>
+
+  
+  <view class="code-all" wx:if="{{isShowCode}}">
+
+    <view class="mask {{animateMask}}" bindtap="hideMask"></view>
+
+    <view class="code-group  {{codeAnimate}} {{isIosX?'iosXBottom':''}}" >
+      <view class="top-view">
+        <view class="tip-view">
+          <button open-type="contact" plain="true"></button>
+          <text>在线客服</text>
+          <image class="weixin" src="/images/wechat.png"></image>
+        </view>
+        <image src="/images/close.png" class="close" bindtap="closeCode"></image>
+      </view>
+      <view class="free-desc" wx:if="{{isFree}}">
+        温馨提示:此刊为瑞丽特别版,无需付费。阅读码领取方式如下:关注瑞丽俯视美容公众号,发送"喜欢瑞丽服饰美容"即可获得阅读码
+      </view>
+      <text class="tip-message">如果您已有阅读码,可在此进行识别激活</text>
+      <view class="input-group">
+        <input type="text" placeholder="请输入阅读码" bindinput="codeInputClick"></input>
+        <view class="confirm" bindtap="readcodeActive">确定</view>
+      </view>
+    </view>
+
+  </view>
+  
+  <view class="code-all" wx:if="{{isShowShare}}">
+    <view class="mask {{animateMask}}" bindtap="hideMask"></view>
+    <view class="share-group {{shareAnimate}} {{isIosX?'iosXBottom':''}}" animation="{{bottomAni}}">
+      <view class="top-view">
+        <text>分享</text>
+        <image class="close" src="/images/close.png" bindtap="closeShare"></image>
+      </view>
+      <view class="func-group">
+        <view class="btn poster" bindtap="saveImageOnClick">
+          <image src="/images/mag_save.png" class="img down"></image>
+          <text>生成海报</text>
+        </view>
+        <view class="share-view">
+          <button open-type="share" plain="true"></button>
+          <view class="inter-view">
+            <image src="/images/mag_share_b.png" class="img down"></image>
+            <text>分享给好友</text>
+          </view>
+    
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="code-all" wx:if="{{isShowPay}}">
+    <view class="mask {{animateMaskPay}}" bindtap="hideMaskPay"></view>
+    <view class="previewPay {{isIosX?'iosXBottom':''}}" animation="{{ani}}">
+      <template is="buy-view" data="{{articleTitle,lastIndex,...pricePrivew,num,minusStatus,customPrice,selAddress,hasActive}}"></template>
+    </view>
+  </view>
+  
+  <view class="gmsmtanchu {{isIosX?'iosXBottom':''}}" animation="{{gmsm_ani}}">
+    <template is="goumaishuoming"></template>
+  </view>
+  
+</view>
+
+
+<template is="do_login" data="{{wxlogin: wxlogin}}" />
+<template is="phonelogin" data="{{showPhoneLogin: showPhoneLogin}}" />
+
+<!-- canvas 画图 -->
+<canvasdrawer painting="{{painting}}" class="canvasdrawer" bind:getImage="eventGetImage"/>
+<view wx:if="{{showposterImg}}" class="popup-mask"></view>
+<view wx:if="{{showposterImg}}" class="posterImg-box">
+  <image mode="widthFix" class="posterImg" src="{{posterImg}}"></image>
+  <view class="btn-create" bindtap="savePosterPic">保存到相册</view>
+</view>
